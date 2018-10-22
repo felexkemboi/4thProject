@@ -1,10 +1,10 @@
 import numpy
 from numpy import inf
 add_number = int(input("Enter the number to add to the numbers: "))
-columns = int(input("Enter the number of columns: "))
+rows = int(input("Enter the number of columns: "))
 
 smaller_list =[1,2,3,4,5,inf]
-rows = len(smaller_list)
+columns = len(smaller_list)
 print("                      ")
 print("Defining the variables ...")
 bigger_list = []
@@ -30,13 +30,10 @@ while True:
         else:
             new_list[n] = new_list[n]
     bigger_list.append(new_list)
-    if len(bigger_list) > columns:
+    if len(bigger_list) > rows:
         break
 #print(bigger_list)
 matrix = numpy.array(bigger_list)
 print("                      ")
-print("The following is your {} * {} matrix".format(rows,columns) )
+print("The following is your {} * {} matrix".format(columns,rows) )
 print(matrix)
-
-#new = numpy.concatenate(bigger_list)
-#print(new)
