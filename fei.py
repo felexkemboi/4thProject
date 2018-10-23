@@ -17,14 +17,6 @@ print("\nMake sure the values are not larger than 10 ...")
 while True:
     new_list = [x+add_number for x in bigger_list[-1] ]
     for n, i in enumerate(new_list):
-        #if i > 50: #not necessary
-            #new_list[n] = i-50
-        #elif i >= 40:
-            #new_list[n] = i - 40
-        #elif i   >= 30:
-            #new_list[n] = i - 30
-        #elif  i >= 20:
-            #new_list[n] = i - 20
         if i  >10: #removing the = sign so that only numbers above 10 are liable to substract
             new_list[n] = i-10
         else:
