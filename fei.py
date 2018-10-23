@@ -25,7 +25,7 @@ while True:
             #new_list[n] = i - 30
         #elif  i >= 20:
             #new_list[n] = i - 20
-        if i  >=10:
+        if i  >10: #removing the = sign so that only numbers above 10 are liable to substract
             new_list[n] = i-10
         else:
             new_list[n] = new_list[n]
