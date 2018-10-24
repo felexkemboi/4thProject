@@ -46,7 +46,7 @@ def matrix():
 
     smaller_list = []
     while columns > 0:
-        random_number = randint(0, 9)
+        random_number = randint(0, 10)
         smaller_list.append(random_number)
         if len(smaller_list) == columns -1:
             break
@@ -57,10 +57,10 @@ def matrix():
     print("\nDefining the variables ...")
 
     bigger_list = []
-    smaller_list=[int(x) for x in input('Enter first row: ').split()]
-    smaller_list=smaller_list[0:columns-1]   
-    print(smaller_list)
-    smaller_list.append(inf)
+    #smaller_list=[int(x) for x in input('Enter first row: ').split()]
+    #smaller_list=smaller_list[0:columns-1]   
+    #print(smaller_list)
+    #smaller_list.append(inf)
     bigger_list.append(smaller_list)
     print("\nAdding %d to the previous list ..." %(number))
     print("\nMaking sure the values are not larger than 10 ...")
