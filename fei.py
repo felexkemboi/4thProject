@@ -1,5 +1,6 @@
 import numpy
 from numpy import inf
+from random import randint
 """add_number = int(input("Enter the number to add to the numbers: "))
 rows = int(input("\nEnter the number of rows: "))
 
@@ -30,23 +31,40 @@ matrix = numpy.array(bigger_list)
 print("\nThe following is your {} * {} matrix".format(rows,columns) )#interchange row and column
 print(matrix)"""
 
-print("""Hello, please call the matrix function and key in
-1. the number to be added to the numbers.
-2. the number of rows. i.e. in that order. in the brackets.""")
+#print("""Hello, please call the matrix function and key in
+#1. the number to be added to the numbers.
+#2. the number of rows. i.e. in that order. in the brackets.""")
 
-number = int(eval(input('Pick a number to add: ')))
-columns = int(eval(input('Number of columns: ')))   
-rows = int(eval(input('Number of rows: ')))
+
 
 def matrix():
+    number = float(input("Please key in the number to be added to the matrix: "))
+    rows = int(input("\nPlease key in the number of the rows: "))
+    columns = int(input("\nplease key in the number of the columns: "))
+    
+    #columns = len(smaller_list) not recquired
+
     smaller_list = []
+    while columns > 0:
+        random_number = randint(0, 9)
+        smaller_list.append(random_number)
+        if len(smaller_list) == columns -1:
+            break
+        else:
+            continue
+    smaller_list.append(inf)
+        
+    print("\nDefining the variables ...")
+
     bigger_list = []
     smaller_list=[int(x) for x in input('Enter first row: ').split()]
     smaller_list=smaller_list[0:columns-1]   
     print(smaller_list)
     smaller_list.append(inf)
     bigger_list.append(smaller_list)
-       
+    print("\nAdding %d to the previous list ..." %(number))
+    print("\nMaking sure the values are not larger than 10 ...")
+     
     while True:
         new_list = [x+number for x in bigger_list[-1]]
         for n, i in enumerate(new_list):
@@ -62,7 +80,6 @@ def matrix():
     print("\nThe following is your %d * %d matrix!" %(rows, columns))
     print(matrix)
 matrix()
-
 
 
 
