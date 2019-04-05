@@ -16,5 +16,5 @@ while True:
                 item[i] = number - limit
             else:
                 item[i] = number
-    if sample == originalsample:
+    if k == limit + 1:
         break
