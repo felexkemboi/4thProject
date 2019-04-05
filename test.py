@@ -1,7 +1,8 @@
 import numpy
 originalsample = [[1,2,3],[3,4,5],[1,6,7],[2,4,6],[2,5,7],[3,4,7],[3,5,6]]
 sample = [[1,2,3],[3,4,5],[1,6,7],[2,4,6],[2,5,7],[3,4,7],[3,5,6]]
-m = 9
+add = float(input("Please key in the number to be added to the matrix: "))
+limit = int(input("\nplease key in the number of the limit to be looped in the matrix: "))
 
 k = 1
 while True:
@@ -10,13 +11,10 @@ while True:
     k = k+1
     for item in sample:
         for i,number in enumerate(item):
-            number +=3
-            if number >m:
-                item[i] = number - m
+            number +=add
+            if number >limit:
+                item[i] = number - limit
             else:
                 item[i] = number
-    """if sample == originalsample:
-        break"""
-    if i == 10:
+    if sample == originalsample:
         break
-#print(sample)
