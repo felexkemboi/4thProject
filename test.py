@@ -16,5 +16,5 @@ while True:
                 item[i] = number - limit
             else:
                 item[i] = number
-    if k == limit + 1:
+    if k == 9:
         break
